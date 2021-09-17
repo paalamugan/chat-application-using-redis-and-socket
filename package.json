@@ -1,0 +1,43 @@
+{
+  "name": "redis-chat-application",
+  "version": "1.0.0",
+  "description": "Simple chat application made with redis and  socket.io",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket",
+    "socket.io",
+    "redis",
+    "express",
+    "node",
+    "socket.io-redis",
+    "chat",
+    "chat application",
+    "backend"
+  ],
+  "author": "Paalamugan",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "redis": "^3.1.2",
+    "socket.io": "^4.2.0",
+    "socket.io-redis": "^6.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "14.17.5",
+    "npm": "6.14.14"
+  }
+}
