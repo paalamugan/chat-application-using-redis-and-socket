@@ -20,7 +20,7 @@
     "backend"
   ],
   "author": "Paalamugan",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "async": "^3.2.1",
     "cors": "^2.8.5",
