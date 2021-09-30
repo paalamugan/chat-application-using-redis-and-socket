@@ -36,7 +36,7 @@ docker-compose up -d
 - In Production,
     - REDIS_HOST= `0.0.0.0`
     - REDIS_PORT= `6379`
-    - REDIS_PASSWORD= `test`
+    - REDIS_PASSWORD= `password`
 
 ## Development
 
