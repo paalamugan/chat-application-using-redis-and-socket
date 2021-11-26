@@ -61,3 +61,37 @@ openssl req -new -key ./keys/key.pem -out ./keys/csr.pem
 openssl x509 -req -days 9999 -in ./keys/csr.pem -signkey ./keys/key.pem -out ./keys/cert.pem
 rm ./keys/csr.pem
 ```
+
+- Create secure private key and public key using openssl algorithm (rsa, ecdsa, ed25519)
+```sh
+# private key
+openssl genpkey -algorithm rsa -out rsa-private.pem
+# public key
+openssl pkey -in rsa-private.pem -pubout -out rsa-public.pem
+```
+```sh
+# private key
+openssl ecparam -genkey -name secp521r1 -noout -out es512-private.pem
+# public key
+openssl ec -in ecdsa-p521-private.pem -pubout -out es512-public.pem
+```
+```
+# private key
+openssl genpkey -algorithm ed25519 -out eddsa-private.pem
+# public key
+openssl pkey -in eddsa-private.pem -pubout -out eddsa-public.pem
+```
+
+- Create secure private key and public key using ssh-keygen algorithm (rsa, dsa, ecdsa, ed25519)
+```sh
+ssh-keygen -t rsa -b 4096
+```
+```sh
+ssh-keygen -t dsa 
+```
+```sh
+ssh-keygen -t ecdsa -b 521 
+```
+```sh
+ssh-keygen -t ed25519
+```
