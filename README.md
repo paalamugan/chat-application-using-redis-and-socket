@@ -87,7 +87,7 @@ openssl pkey -in eddsa-private.pem -pubout -out eddsa-public.pem
 ssh-keygen -t rsa -b 4096
 ```
 ```sh
-ssh-keygen -t dsa 
+ssh-keygen -t dsa -b 2048
 ```
 ```sh
 ssh-keygen -t ecdsa -b 521 
