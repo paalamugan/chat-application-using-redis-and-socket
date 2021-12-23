@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "env": {
+    },
+    "builds": [
+        {
+          "src": "app/index.js",
+          "use": "@vercel/node"
+        }
+    ],
+    "rewrites": [
+        { "source": "/(.+)", "destination": "app/index.js" }
+    ]
+
+}

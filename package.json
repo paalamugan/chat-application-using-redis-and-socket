@@ -2,11 +2,12 @@
   "name": "redis-chat-application",
   "version": "1.0.0",
   "description": "Simple chat application made with redis and  socket.io",
-  "main": "app.js",
+  "main": "app/index.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "cross-env NODE_ENV=production node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app/index.js",
+    "start": "cross-env NODE_ENV=production node app/index.js",
+    "local": "vercel",
+    "deploy": "vercel --prod"
   },
   "keywords": [
     "socket",
@@ -39,7 +40,6 @@
     "nodemon": "^2.0.12"
   },
   "engines": {
-    "node": "14.17.5",
-    "npm": "6.14.14"
+    "node": ">=14.0.0"
   }
 }

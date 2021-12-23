@@ -95,3 +95,38 @@ ssh-keygen -t ecdsa -b 521
 ```sh
 ssh-keygen -t ed25519
 ```
+
+- Initialize Vercel legacy setup in `vercel.json`
+```json
+{
+    "version": 2,
+    "env": {
+    },
+    "builds": [
+      {
+        "src": "app/index.js",
+        "use": "@vercel/node",
+        "config": { "includeFiles": ["app/**"] }
+      },
+      {
+        "src": "public/**",
+        "use": "@vercel/static",
+        "config": { "includeFiles": ["public/**"] }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "app/index.js"
+      },
+      {
+        "src": "/",
+        "dest": "public/index.html"
+      },
+      {
+        "src": "/(.+)",
+        "dest": "public/$1"
+      }
+    ]
+  }
+```
