@@ -9,7 +9,7 @@
         }
     ],
     "rewrites": [
-        { "source": "/(.+)", "destination": "app/index.js" }
+        { "source": "/(.*)", "destination": "app/index.js" }
     ]
 
 }
